@@ -31,6 +31,10 @@ public class SupermarketController {
         return good;
     }
 
+    public int sepehr(int a) {
+        return 0;
+    }
+
     public Collection<Good> getGoods() {
         return supermarket.getGoods().values();
     }
