@@ -14,17 +14,20 @@ public class OrderItem {
     public Good getGood() {
         return good;
     }
+
     public int getCount() {
         return count;
     }
+
     public double getAmount() {
         return amount;
     }
+
     public void setCount(int count) {
         this.count = count;
     }
+
     public void setAmount(double amount) {
         this.amount = amount;
     }
-
 }

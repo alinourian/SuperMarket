@@ -6,21 +6,18 @@ import java.util.regex.Pattern;
 public enum ConsoleCommand {
     EXIT("(?i)exit"),
     ADD_GOOD("(?i)add\\s+(countable|uncountable)\\s+good\\s+(\\w+)"),
-    NEW_ORDER("(?!)new\\s+order\\s+from\\s+(\\w+)"),
-    END_ORDER("(?!)end\\s+order"),
-    GOODS_LIST("(?!)goods\\s+list"),
-    TOTAL_SALES("(?!)total\\s+sales(\\s+(--cash|--credit))?"),
-    TOTAL_PROFIT("(?!)total\\s+profit");
+    NEW_ORDER("(?i)new\\s+order\\s+from\\s+(\\w+)"),
+    GOODS_LIST("(?i)goods\\s+list"),
+    TOTAL_SALES("(?i)total\\s+sales(\\s+--(credit|cash))?"),
+    TOTAL_PROFIT("(?i)total\\s+profit");
 
-    private Pattern commandPattern;
+    private final Pattern commandPattern;
+
+    public Matcher getStringMatcher(String input) {
+        return this.commandPattern.matcher(input);
+    }
 
     ConsoleCommand(String commandPatternString) {
         this.commandPattern = Pattern.compile(commandPatternString);
     }
-
-    public Matcher getStringMatcher(String input) {
-        return commandPattern.matcher(input);
-    }
-
-
 }

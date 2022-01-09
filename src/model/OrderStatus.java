@@ -1,5 +1,5 @@
 package model;
 
 public enum OrderStatus {
-    PROSECCING, CREATED, DONE
+    PROCESSING, CREATED, DONE
 }

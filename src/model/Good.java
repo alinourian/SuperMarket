@@ -17,34 +17,43 @@ public class Good {
         this.amount = amount;
     }
 
-    public String getName() {
-        return name;
-    }
-    public int getSellPrice() {
-        return sellPrice;
-    }
-    public int getBuyPrice() {
-        return buyPrice;
-    }
-    public boolean isCountable() {
-        return isCountable;
-    }
-    public int getCount() {
-        return count;
-    }
-    public double getAmount() {
-        return amount;
-    }
     public void setSellPrice(int sellPrice) {
         this.sellPrice = sellPrice;
     }
+
     public void setBuyPrice(int buyPrice) {
         this.buyPrice = buyPrice;
     }
+
     public void setCount(int count) {
         this.count = count;
     }
+
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getSellPrice() {
+        return sellPrice;
+    }
+
+    public int getBuyPrice() {
+        return buyPrice;
+    }
+
+    public boolean isCountable() {
+        return isCountable;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public double getAmount() {
+        return amount;
     }
 }
